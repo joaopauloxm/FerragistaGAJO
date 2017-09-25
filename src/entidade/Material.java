@@ -1,4 +1,4 @@
-package entidades;
+package entidade;
 
 public class Material {
     private int codigo;
@@ -6,6 +6,8 @@ public class Material {
     private double valor;
     private int quantidade;
 
+    public Material() { }
+    
     public Material(int codigo, String descricao, double valor, int quantidade) {
         this.codigo = codigo;
         this.descricao = descricao;
