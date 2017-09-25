@@ -12,11 +12,11 @@ public class NMaterial {
         per = new PMaterial();
     }
     
-    public void salvar(Material tipo) throws SQLException {
-        if (tipo.getCodigo() == 0)
-            per.incluir(tipo);
+    public void salvar(Material material) throws SQLException {
+        if (material.getCodigo() == 0)
+            per.incluir(material);
         else
-            per.alterar(tipo);  
+            per.alterar(material);  
     }
     
     public void excluir(int codigo) throws SQLException {

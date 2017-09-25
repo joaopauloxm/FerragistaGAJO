@@ -6,7 +6,7 @@ public class Material {
     private double valor;
     private int quantidade;
 
-    public Material() { }
+    public Material() { this.codigo = 0; }
     
     public Material(int codigo, String descricao, double valor, int quantidade) {
         this.codigo = codigo;

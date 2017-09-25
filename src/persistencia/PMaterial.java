@@ -15,7 +15,7 @@ public class PMaterial {
         Connection cnn = Conexao.getConexao();
         String sql = "INSERT INTO material"
                 + "(descricao, valor, quantidade) VALUES"
-                + "(?,?);";
+                + "(?,?,?);";
         PreparedStatement prd = cnn.prepareStatement(sql);
         prd.setString(1, parametro.getDescricao());
         prd.setDouble(2, parametro.getValor());

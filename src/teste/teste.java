@@ -1,22 +1,16 @@
 package teste;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import entidade.Material;
 import java.sql.SQLException;
-import util.Conexao;
+import negocio.NMaterial;
 
 public class teste {
     public static void main(String[] args) throws SQLException {
-        Connection cnn = Conexao.getConexao();
-        String sql = "INSERT INTO material"
-                + "(descricao, valor, quantidade) VALUES"
-                + "(?,?,?);";
-        PreparedStatement prd = cnn.prepareStatement(sql);
-        prd.setString(1, "joelho");
-        prd.setDouble(2, 50.0);
-        prd.setInt(3, 1);
-        prd.execute();
-        cnn.close();
-        System.out.print("foi");
+        NMaterial negMat = new NMaterial();
+        Material mat = new Material();
+        mat.setDescricao("PARAFUSO FENDA 3MM FERRO");
+        mat.setValor(0.3);
+        mat.setQuantidade(100);
+        negMat.salvar(mat);
     }
 }
