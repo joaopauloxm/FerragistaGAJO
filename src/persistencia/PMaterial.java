@@ -21,7 +21,7 @@ public class PMaterial {
         prd.setDouble(2, parametro.getValor());
         prd.setInt(3, parametro.getQuantidade());
         prd.execute();
-        String sql2 = "SELECT currval('seq_cod_material') as codigo";
+        String sql2 = "SELECT currval('material_codigo_seq') as codigo";
         Statement stm = cnn.createStatement();
         ResultSet rs = stm.executeQuery(sql2);
         if (rs.next()) {
