@@ -42,7 +42,7 @@ public class PMaterial {
         prd.setString(1, parametro.getDescricao());
         prd.setDouble(2, parametro.getValor());
         prd.setInt(3, parametro.getQuantidade());
-        prd.setInt(4, parametro.getCodigo());    
+        prd.setInt(4, parametro.getCodigo());
         prd.execute();
     }
 
@@ -50,7 +50,7 @@ public class PMaterial {
         Connection cnn = Conexao.getConexao();
         String sql = "DELETE FROM material WHERE codigo = ?;";
         PreparedStatement prd = cnn.prepareStatement(sql);
-        prd.setInt(1, codigo);      
+        prd.setInt(1, codigo);
         prd.execute();
     }
 
@@ -81,7 +81,9 @@ public class PMaterial {
         ResultSet rs = stm.executeQuery(sql);
         ArrayList<Material> lista = null;
         while (rs.next()) {
-            if (lista == null) lista = new ArrayList<>();
+            if (lista == null) {
+                lista = new ArrayList<>();
+            }
             Material objeto = new Material();
             objeto.setCodigo(rs.getInt("codigo"));
             objeto.setDescricao(rs.getString("descricao"));
