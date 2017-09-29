@@ -9,5 +9,6 @@ public class teste {
         NVenda nVenda = new NVenda();
         Venda venda = new Venda();
         //oi 
+        
     }
 }
