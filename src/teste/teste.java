@@ -8,6 +8,6 @@ public class teste {
     public static void main(String[] args) throws SQLException {
         NVenda nVenda = new NVenda();
         Venda venda = new Venda();
-        
+        //oi
     }
 }
