@@ -28,7 +28,6 @@ public class PMaterial {
             parametro.setCodigo(rs.getInt("codigo"));
         }
         rs.close();
-        cnn.close();
     }
 
     public void alterar(Material parametro) throws SQLException {
@@ -70,7 +69,6 @@ public class PMaterial {
         }
         prd.close();
         rs.close();
-        cnn.close();
         return objeto;
     }
 
@@ -93,7 +91,6 @@ public class PMaterial {
         }
         stm.close();
         rs.close();
-        cnn.close();
         return lista;
     }
 }

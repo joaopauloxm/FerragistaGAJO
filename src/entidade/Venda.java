@@ -10,7 +10,9 @@ public class Venda {
     private double valorTotal;
     private ArrayList<Material> materiais;
     
-    public Venda() { }
+    public Venda() {
+        materiais = new ArrayList();
+    }
 
     public Venda(int codigo, Date dataHora, double valorTotal, ArrayList<Material> materiais) {
         this.codigo = codigo;
