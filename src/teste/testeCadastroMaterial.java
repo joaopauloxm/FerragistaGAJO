@@ -13,14 +13,14 @@ public class testeCadastroMaterial {
         material.setValor(10);
         
         Material material2 = new Material();
-        material.setDescricao("MATERIAL DOIS");
-        material.setQuantidade(100);
-        material.setValor(60);
+        material2.setDescricao("MATERIAL DOIS");
+        material2.setQuantidade(100);
+        material2.setValor(60);
         
         Material material3 = new Material();
-        material.setDescricao("MATERIAL QUATRO");
-        material.setQuantidade(666);
-        material.setValor(23);
+        material3.setDescricao("MATERIAL QUATRO");
+        material3.setQuantidade(666);
+        material3.setValor(23);
         
         nMaterial.salvar(material);
         nMaterial.salvar(material2);
